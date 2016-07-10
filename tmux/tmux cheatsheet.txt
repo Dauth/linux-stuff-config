@@ -1,0 +1,53 @@
+tmux  default prefix = ctrl b  changed = ctrl a
+
+ctrl b c  = new window
+ctrl b , = rename
+ctrl b p = prev   or n for next
+ctrl b f = find window
+ctrl b w = list all window
+ctrl b % = split right
+prefix " = split below
+ctrl b : = enter command mode
+prefix & = kill window
+prefix X = kill pane
+prefix ? = see all bindings
+prefix spacebar = cycle panes
+prefix 0-9 or up down left right = move  between panes
+
+tmux new -s namehere
+tmux new -s namehere -n windownamehere
+tmux list-session
+tmux attach -t namehere
+
+
+
+https://github.com/christoomey/vim-tmux-navigator
+https://github.com/tmux-plugins/tmux-resurrect
+sudo apt-get install tmux
+
+http://www.emacswiki.org/emacs/MovingTheCtrlKey   == change ctrl key
+
+
+stack pg 21
+impt binding pg 29
+
+pg 38 for setting status
+
+
+
+set color scheme
+http://stackoverflow.com/a/10264470/3975380
+
+
+
+
+chmod +x garyauto.sh
+
+work/garyauto.sh
+
+
+
+sudo gem install tmuxinator
+tmuxinator open projectname = to edit
+tmuxinator projectname  = to execute
+http://stackoverflow.com/a/9976282/3975380    = used to resize
