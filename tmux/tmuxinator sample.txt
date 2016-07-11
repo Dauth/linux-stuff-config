@@ -3,6 +3,8 @@
 name: project
 root: ~/work/dae-project
 
+#force tmux to use 256 color
+tmux_command: tmux -2
 # Optional tmux socket
 # socket_name: foo
 
