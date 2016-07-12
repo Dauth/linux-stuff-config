@@ -59,3 +59,8 @@ update tmux to 2.0
 sudo add-apt-repository ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install tmux
+
+
+tmux error: failed to connect to server: connection refused: solution
+https://blog.srvbox.com/tmux-attach-no-sessions-quick-fix/
+killall -s SIGUSR1 tmux
