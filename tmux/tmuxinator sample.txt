@@ -1,10 +1,10 @@
+
 # ~/.tmuxinator/project.yml
 
 name: project
-root: ~/work/dae-project
-
-#force tmux to use 256 color
+root: ~/work/myWorkProject/dae-project
 tmux_command: tmux -2
+
 # Optional tmux socket
 # socket_name: foo
 
@@ -30,16 +30,21 @@ tmux_command: tmux -2
 # post: tmux -CC attach -t project
 
 windows:
-  - normal_editor:
-      layout: d4cd,143x32,0,0[143x29,0,0,0,143x2,0,30,2] 
+  - django_editor:
+      layout: 6d1b,178x40,0,0{129x40,0,0,0,48x40,130,0[48x20,130,0,7,48x19,130,21,8]}
+      panes:
+        - vim
+        - cd ~/work/myWorkProject && source bin/activate && cd ~/work/myWorkProject/dae-project && gunicorn -b 0.0.0.0:8000 dae_project.wsgi
+        - cd ~/work/myWorkProject && source bin/activate && cd ~/work/myWorkProject/dae-project && node server.js
+  - updown:
+      layout: 2f72,178x40,0,0[178x33,0,0,1,178x6,0,34,5]
       panes:
         - vim
         -
-  - django_editor:
-      layout: 62f0,238x51,0,0[238x40,0,0,1,238x10,0,41{119x10,0,41,5,118x10,120,41,6}]
+  - leftright:
+      layout: df83,178x40,0,0{124x40,0,0,2,53x40,125,0,9}
       panes:
         - vim
-        - cd ~/work/dae-project && gunicorn dae_project.wsgi
-        - cd ~/work/dae-project && node server.js
+        -
 
 # tmux list-windows  = it shows you the custom layout for the windows
