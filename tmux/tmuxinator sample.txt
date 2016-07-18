@@ -31,11 +31,12 @@ tmux_command: tmux -2
 
 windows:
   - django_editor:
-      layout: 6d1b,178x40,0,0{129x40,0,0,0,48x40,130,0[48x20,130,0,7,48x19,130,21,8]}
+      layout: 301f,178x42,0,0{119x42,0,0,15,58x42,120,0[58x16,120,0,18,58x15,120,17,19,58x9,120,33,23]}
       panes:
-        - vim
+        - vim 
         - cd ~/work/myWorkProject && source bin/activate && cd ~/work/myWorkProject/dae-project && gunicorn -b 0.0.0.0:8000 dae_project.wsgi
         - cd ~/work/myWorkProject && source bin/activate && cd ~/work/myWorkProject/dae-project && node server.js
+        - tty-clock -s -C 6 -b
   - updown:
       layout: 2f72,178x40,0,0[178x33,0,0,1,178x6,0,34,5]
       panes:
