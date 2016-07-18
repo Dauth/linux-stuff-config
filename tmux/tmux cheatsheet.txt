@@ -70,6 +70,9 @@ http://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-an
 https://gist.github.com/agnoster/3712874
 zsh theme
 https://github.com/Dauth/oh-my-zsh-powerline-theme
+solarized terminal theme
+https://github.com/Anthony25/gnome-terminal-colors-solarized
+
 
 
 tmux error: failed to connect to server: connection refused: solution
