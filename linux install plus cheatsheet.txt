@@ -69,6 +69,7 @@ install powerline and font
 http://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
 https://gist.github.com/agnoster/3712874
 zsh theme
+https://github.com/bhilburn/powerlevel9k   (recommended)
 https://github.com/Dauth/oh-my-zsh-powerline-theme
 solarized terminal theme
 https://github.com/Anthony25/gnome-terminal-colors-solarized
