@@ -60,6 +60,9 @@ sudo add-apt-repository ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install tmux tty-clock
 
+tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 
 tmux error: failed to connect to server: connection refused: solution
 https://blog.srvbox.com/tmux-attach-no-sessions-quick-fix/
