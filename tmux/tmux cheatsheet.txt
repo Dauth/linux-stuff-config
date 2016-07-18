@@ -58,7 +58,7 @@ http://stackoverflow.com/a/9976282/3975380    = used to resize
 update tmux to 2.0
 sudo add-apt-repository ppa:pi-rho/dev
 sudo apt-get update
-sudo apt-get install tmux
+sudo apt-get install tmux tty-clock
 
 
 tmux error: failed to connect to server: connection refused: solution
