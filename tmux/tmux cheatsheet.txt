@@ -68,6 +68,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 install powerline and font
 http://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
 https://gist.github.com/agnoster/3712874
+zsh theme
+https://github.com/Dauth/oh-my-zsh-powerline-theme
 
 
 tmux error: failed to connect to server: connection refused: solution
