@@ -36,7 +36,7 @@ windows:
         - vim 
         - cd ~/work/myWorkProject && source bin/activate && cd ~/work/myWorkProject/dae-project && gunicorn -b 0.0.0.0:8000 dae_project.wsgi
         - cd ~/work/myWorkProject && source bin/activate && cd ~/work/myWorkProject/dae-project && node server.js
-        - tty-clock -s -C 1 -b
+        - tty-clock -s -C 1 -b -f "%d/%m/%Y"
   - updown:
       layout: 2f72,178x40,0,0[178x33,0,0,1,178x6,0,34,5]
       panes:
