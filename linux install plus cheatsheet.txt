@@ -73,6 +73,8 @@ https://github.com/bhilburn/powerlevel9k   (recommended)
 https://github.com/Dauth/oh-my-zsh-powerline-theme
 solarized terminal theme
 https://github.com/Anthony25/gnome-terminal-colors-solarized
+glances
+wget -O- https://bit.ly/glances | /bin/bash
 
 macox inspred alfredapp
 https://github.com/qdore/Mutate
