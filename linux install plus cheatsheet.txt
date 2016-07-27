@@ -76,6 +76,10 @@ https://github.com/Anthony25/gnome-terminal-colors-solarized
 glances
 wget -O- https://bit.ly/glances | /bin/bash
 
+cmus / music player
+http://www.tecmint.com/install-cmus-music-player-in-linux/
+
+
 macox inspred alfredapp
 https://github.com/qdore/Mutate
 
