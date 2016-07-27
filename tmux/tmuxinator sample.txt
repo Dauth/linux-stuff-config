@@ -41,15 +41,20 @@ windows:
       layout: 2f72,178x40,0,0[178x33,0,0,1,178x6,0,34,5]
       panes:
         - vim
-        -
+        - cd ~/work/myWorkProject && source bin/activate
   - leftright:
       layout: df83,178x40,0,0{124x40,0,0,2,53x40,125,0,9}
       panes:
         - vim
-        -
+        - cd ~/work/myWorkProject && source bin/activate
   - monitor:
       layout:
       panes:
         - glances
+  - music:
+      layout: 
+      panes:
+        - cmus
+
 
 # tmux list-windows  = it shows you the custom layout for the windows
