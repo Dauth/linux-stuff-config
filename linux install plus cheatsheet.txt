@@ -78,6 +78,8 @@ wget -O- https://bit.ly/glances | /bin/bash
 
 cmus / music player
 http://www.tecmint.com/install-cmus-music-player-in-linux/
+http://hallocaffeine.tumblr.com/post/82568710343/ubuntu-mpd-and-ncmpcpp-music-player-in-terminal   (using now)
+
 
 
 macox inspred alfredapp
