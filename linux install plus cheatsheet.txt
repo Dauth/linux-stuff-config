@@ -78,6 +78,7 @@ wget -O- https://bit.ly/glances | /bin/bash
 
 cmus / music player
 http://www.tecmint.com/install-cmus-music-player-in-linux/
+https://github.com/karlstav/cava#usage  (to visualize)
 
 
 
