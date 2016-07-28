@@ -4,7 +4,7 @@ export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 alias tmux="TERM=screen-256color-bce tmux"
 export EDITOR=vim
-export MPD_HOST=/home/developer/.mpd/socket
+
 
 
 
