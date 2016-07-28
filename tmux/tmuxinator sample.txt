@@ -55,7 +55,7 @@ windows:
       layout: c443,168x35,0,0[168x17,0,0,4,168x17,0,18,11]
       panes:
         - cmus
-
+        - cd ~/Downloads/cava && ./cava
 
 
 # tmux list-windows  = it shows you the custom layout for the windows
