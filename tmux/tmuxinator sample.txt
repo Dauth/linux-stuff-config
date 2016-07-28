@@ -54,9 +54,8 @@ windows:
   - music:
       layout: c443,168x35,0,0[168x17,0,0,4,168x17,0,18,11]
       panes:
+        - source ~/.bashrc && mpd && ncmpcpp
         - ncmpcpp
-        - ncmpcpp
-          - 8
 
 
 # tmux list-windows  = it shows you the custom layout for the windows
