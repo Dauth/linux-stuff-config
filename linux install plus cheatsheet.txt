@@ -78,7 +78,7 @@ wget -O- https://bit.ly/glances | /bin/bash
 
 cmus / music player
 http://www.tecmint.com/install-cmus-music-player-in-linux/
-sudo apt-get install pulseaudio cmus cmake
+sudo apt-get install pulseaudio cmus cmake automake
 sudo apt-get install build-essential libtool
 https://github.com/karlstav/cava#usage  (to visualize)
 
