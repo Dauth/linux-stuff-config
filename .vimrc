@@ -34,6 +34,10 @@ Bundle 'gmarik/vundle'
 Plugin 'Chiel92/vim-autoformat'
 " tmux vim navigator
 Plugin 'christoomey/vim-tmux-navigator'
+" vim screensaver
+Plugin 'itchyny/screensaver.vim'
+" cmus remote control 
+Plugin 'azadkuh/vim-cmus'
 "themes
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'easymotion/vim-easymotion'
@@ -482,3 +486,9 @@ let g:indentLine_color_term = 222
 
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_ignore_javaScriptdoc = 1
+
+nnoremap <leader>z :CmusPrevious<cr>
+nnoremap <leader>x :CmusPlay<cr>
+nnoremap <leader>c :CmusPause<cr>
+nnoremap <leader>v :CmusStop<cr>
+nnoremap <leader>b :CmusNext<cr>
