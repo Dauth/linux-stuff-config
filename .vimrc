@@ -493,3 +493,5 @@ nnoremap <leader>c :CmusPause<cr>
 nnoremap <leader>v :CmusStop<cr>
 nnoremap <leader>b :CmusNext<cr>
 vnoremap <leader>z g<C-g>1gs
+
+hi MatchParen ctermfg=208 ctermbg=143 cterm=bold
