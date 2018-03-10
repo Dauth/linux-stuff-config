@@ -124,7 +124,7 @@ pip install git+git://github.com/Lokaltog/powerline
 #wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 #fc-cache -vf /usr/share/fonts/
 #mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-##git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ==========================================================
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 cd gnome-terminal-colors-solarized
