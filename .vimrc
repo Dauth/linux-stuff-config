@@ -29,7 +29,9 @@ Bundle 'gmarik/vundle'
 " You can disable or add new ones here:
 
 " Plugins from github repos:
-
+Plugin 'vim-vdebug/vdebug'
+Plugin 'vim-scripts/bash-support.vim'
+Plugin 'yuratomo/w3m.vim'
 "auto formatting for vim
 Plugin 'Chiel92/vim-autoformat'
 " tmux vim navigator
@@ -460,7 +462,7 @@ augroup END
 
 " autoformat which on save and shows syntax
 "au BufWrite * :Autoformat
-noremap <F5> :Autoformat<CR>
+noremap <F12> :Autoformat<CR>
 
 set clipboard=unnamedplus
 
