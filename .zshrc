@@ -87,3 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time load ram)
+export PERL5LIB=~/Desktop/Komodo-PerlRemoteDebugging-8.0.2-78971-linux-x86_64
+export PERL5DB="BEGIN { require q($PERL5LIB/perl5db.pl)}"
+export PERLDB_OPTS="RemotePort=localhost:9000"
+export DBGP_IDEKEY="whatever"
